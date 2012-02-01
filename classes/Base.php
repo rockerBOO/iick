@@ -1,14 +1,16 @@
 <?php
 
-class Base {
-    public function get($key) {
-        if ($this->fieldExists($key))
+class Base 
+{
+    public function get($key) 
+    {
+        if ($this->fieldExists($key)) 
         {
-            if (isset($this->data[$key]))
+            if (isset($this->data[$key])) 
             {
                 return $this->data[$key];
-            }
-            else
+            } 
+            else 
             {            
                 return '';
             }
