@@ -1,7 +1,6 @@
 <?php
 
-class User extends Base
-{
+class User extends Base {
     public $fields = array(
         'passhash',
         'email',
@@ -19,13 +18,11 @@ class User extends Base
         'torrents_per_page'
     );
     
-    public function isLoggedIn()
-    {
+    public function isLoggedIn() {
         return isset($_SESSION['USER']['ID']) && $_SESSION['USER']['ID'] > 0 ? true : false;
     }
     
-    public function add($input)
-    {
+    public function add($input) {
         $input['passhash'] = md5(microtime() . rand(1000, 9999));
         $input['title'] = 'noob';
         $input['status'] = 'pending';

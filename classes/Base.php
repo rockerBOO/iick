@@ -1,9 +1,7 @@
 <?php
 
-class Base
-{
-    public function get($key)
-    {
+class Base {
+    public function get($key) {
         if ($this->fieldExists($key))
         {
             if (isset($this->data[$key]))
@@ -19,8 +17,7 @@ class Base
         return '';
     }
     
-    public function loadMany($query)
-    {
+    public function loadMany($query) {
         $this->clearErrors();
         
         if (isset($query['_limit']))
@@ -45,8 +42,7 @@ class Base
         return $cursor;
     }
     
-    public function load($query)
-    {
+    public function load($query) {
         $this->clearErrors();
         
         if (isset($query['_id']))
@@ -72,13 +68,11 @@ class Base
         return $this;
     }
     
-    public function add($input)
-    {
+    public function add($input) {
         return $this->getMongoCollection()->insert($input);
     }
     
-    public function update($input)
-    {
+    public function update($input){
         return $this->getMongoCollection()->update(array('_id' => $this->id), array('$set' => $input));
     }
     

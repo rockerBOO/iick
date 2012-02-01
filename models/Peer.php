@@ -1,7 +1,6 @@
 <?php
 
-class Peer extends Base
-{
+class Peer extends Base {
     public $fields = array(
         'torrent',
         'user_id',

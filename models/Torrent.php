@@ -1,7 +1,6 @@
 <?php
 
-class Torrent extends Base
-{
+class Torrent extends Base {
     public $fields = array(
         'name',
         'info_hash',

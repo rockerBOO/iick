@@ -1,7 +1,6 @@
 <?php
 
-class File extends Base
-{
+class File extends Base {
     public $fields = array(
         'torrent',
         'filename',
